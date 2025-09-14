@@ -7,7 +7,13 @@ Microservicio de plataforma educativa con pipeline CI/CD usando GitHub Actions..
 // Descripción
 Este repositorio contiene un microservicio para una plataforma de educación tecnológica (EduTech), desarrollado en ** Java Spring Boot**, con un **pipeline de integración y entrega continua (CI/CD)** configurado mediante **GitHub Actions**.
 
---__ Segunda funcionalidad simulada
+ feature/segunda-funcionalidad
+
+Segunda funcionalidad simulada
+
+-hotfix: corrección temporal de error...
+
+ develop
 
 El objetivo es demostrar un flujo DevOps básico, incluyendo:
 - Control de versiones con Git y ramas (`main`, `develop`, `feature/*`, `hotfix/*`)
