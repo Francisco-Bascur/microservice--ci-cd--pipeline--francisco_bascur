@@ -1,35 +1,39 @@
+
 //// Microservicio de Plataforma Educativa - CI/CD
 ## Autor : Francisco Bascur Arévalo
 _______________________________________________________________________________________________________________________________________
 / Nota !
 Este repositorio forma parte de la **Evaluación Parcial N°1 de Ingeniería DevOps**, demostrando buenas prácticas de control de versiones, ramas GitFlow y pipeline CI/CD con GitHub Actions.
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 // Descripción
 Este repositorio contiene microservicios para una plataforma de educación tecnológica onlinne (EduTech), 
 desarrollado en Java con Spring Boot  trabajamos con un **pipeline de integración y entrega continua (CI/CD)** configurado mediante
 // GitHub Action...
 ---------------------------------------------------------------------------------------------------------------------------------------
+
 // El objetivo es demostrar un flujo DevOps básico, incluyendo:
 - Control de versiones con Git y ramas (`main`, `develop`, `feature/*`, `hotfix/*`)
 - Automatización de pruebas y builds
 - Integración y despliegue continuo (CI/CD)
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 // Modelo de ramificación
-Se utiliza **GitFlow** debido a que:
+Se utiliza **GitFlow** debido a que.....
+
 - Permite un desarrollo organizado mediante ramas `feature` y `hotfix`.
 - Facilita la colaboración en equipo.
 - Mantiene `main` estable para producción y `develop` para integración de cambios.
+
 ---------------------------------------------------------------------------------------------------------------------------------------
 // Ramas principales:
 - `main`: versión estable lista para producción
 - `develop`: integración de todas las funcionalidades antes del release
-- `feature/<nombre>`: nuevas funcionalidades
-- `hotfix/<nombre>`: correcciones urgentes
+- `feature/<login>`: nuevas funcionalidades
+- `hotfix/<bug>`: correcciones urgentes
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 
-// Flujo de trabajo
+// Flujo de trabajo :
 1. Crear rama `feature/*` para implementar una funcionalidad.
 2. Hacer commits claros y descriptivos.
 3. Abrir **Pull Request** hacia `develop` para revisión.
@@ -40,7 +44,31 @@ Se utiliza **GitFlow** debido a que:
 Workflow configurado para:
 - **push** a la rama `develop`
 - **pull request** hacia `main`
-//
+//----------------------------------------------------------------------------------------------------------------------------------
+
+ ## GUIA DE BUENAS PRACTICAS PARA EL REPOSITORIO !
+
+- **Ramas**  
+  - `main`: estable (producción)  
+  - `develop`: integración  
+  - `feature/<nombre>` → nuevas funciones (ej: `feature/login`)  
+  - `hotfix/<nombre>` → correcciones urgentes (ej: `hotfix/email-bug`)  
+
+- **Commits**  
+  Usar prefijos:  
+  - `feat:` nueva funcionalidad  
+  - `fix:` corrección de errores  
+  - `docs:` documentación  
+  - `refactor:` cambios internos de código  
+  **Ejemplo:** `feat: agregar registro de usuarios`  
+
+- **Revisión**  
+  - Todo PR debe revisarse antes de merge.  
+  - PRs a `develop` = features y hotfixes.  
+  - PRs a `main` solo desde `develop` y con aprobación.  
+
+----------------------------------------------------------------------------------------------------------------------------------
+
 El pipeline realiza:
 1. Checkout del repositorio
 2. Setup de JDK 17
@@ -56,7 +84,9 @@ El pipeline realiza:
 - `pom.xml` → Configuración de Maven y dependencias
 - `README.md` → Documentación del proyecto
 ---------------------------------------------------------------------------------------------------------------------------------------
-// Tecnologías y herramientas utilizadas
+
+// Tecnologías y herramientas utilizadas en el proyecto edu-tech... !
+
 - **Java 17**
 - **Spring Boot 3.x**
 - **Maven**
@@ -65,4 +95,4 @@ El pipeline realiza:
 - **Git y GitHub** (control de versiones y colaboración)
 - **GitHub Actions** (CI/CD)
 
-_______________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________________________________
